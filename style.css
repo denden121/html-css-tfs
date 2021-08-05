@@ -1,0 +1,301 @@
+body,html {
+    background-color: #1C1C1C;
+    height: 100%;
+    font-family: Roboto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1280px;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+    margin: auto auto -50px;
+}
+
+.wrapper__search {
+    display: flex;
+    justify-content: center;
+}
+
+.container__logo{
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 54px;
+}
+
+.search__item {
+    width: 628px;
+    padding: 18px 63px 20px 63px;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 24px;
+}
+
+.scroll  .search_scroll {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    border-bottom: 2px solid #ffffff;
+    background: rgba(28, 28, 28, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.search__item_active {
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid #FDCE25;
+}
+
+.input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 26px;
+    width: 26px;
+    background-image: url("./images/Vector.svg");
+}
+
+.input::-webkit-search-cancel-button:hover {
+    -webkit-appearance: none;
+    height: 26px;
+    width: 26px;
+    background-image: url("./images/Vector_hover.svg");
+}
+
+
+.scroll .input_scroll {
+    width: 1280px;
+    margin: auto;
+    align-items: center;
+}
+
+.search__input {
+    color: #ffffff;
+    width: 100%;
+    font-size: 24px;
+    border: none;
+    padding-left: 56px;
+    background: transparent url("./images/Union.svg") no-repeat center left;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
+.search__close {
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url("./images/Vector.svg");
+    width: 48px;
+    height: 48px;
+    background-position: center left;
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+
+.scroll .search__close_scroll {
+    left: 85%;
+}
+
+.search__close:hover {
+    background-image: url("./images/Vector_hover.svg");
+    background-repeat: no-repeat;
+}
+
+.history {
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.history {
+    display: flex;
+}
+
+.history__item {
+    background-color: rgba(255, 255, 255, 0.8);;
+    padding: 6px 16px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.history__item:hover {
+    background-color: #ffffff;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+}
+
+.loading img {
+    width: 330px;
+    height: 220px;
+}
+
+.wrapper__result {
+    display: none;
+}
+
+.wrapper__result {
+    display: block;
+    margin-top: 100px;
+}
+.result__label {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 36px;
+}
+
+.result__cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.result__found h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.poster {
+    display: block;
+    position: relative;
+    width: 302px;
+    height: 454px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 12px;
+}
+
+.poster__film {
+    width: 302px;
+    height: 454px;
+}
+
+.about-film {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.poster__raiting_onload {
+    margin-right: 20px;
+    height: 38px;
+
+    font-size: 24px;
+    line-height: 36px;
+    text-align: end;
+    color: white;
+}
+
+.poster__name, .poster__name_onload {
+    margin-left: 20px;
+    width: 262px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+}
+
+.poster__name_onload {
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+.poster__name {
+    margin-top: 82px;
+}
+
+.poster__genre, .poster__genre_onload {
+    margin: 16px 0 0 20px;
+    width: 168px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    text-align: left;
+}
+
+.poster__year, .poster__year_onload {
+    margin: -24px 0 20px 234px;
+    width: 48px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    text-align: right;
+}
+
+.poster__genre, .poster__name, .poster__year {
+    opacity: 0.24;
+}
+
+.poster__genre_onload,.poster__year_onload,.poster__name_onload, .poster__raiting_onload {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.poster:hover > img {
+    opacity: 0.3;
+}
+
+.poster > img {
+    transition: opacity 1s;
+}
+
+.poster:hover .poster__genre_onload, .poster:hover .poster__year_onload {
+    opacity: 0.4;
+
+}
+
+.poster:hover .poster__name_onload, .poster:hover .poster__raiting_onload {
+    opacity: 1;
+}
+
+.poster__name_load {
+    margin-left: 20px;
+    width: 246px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+}
+
+.poster__genre_load {
+    margin: 8px 0 20px 20px;
+    width: 156px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+}
+
+
+
+.push {
+    height: 50px;
+}
+
+.footer__label {
+    padding-bottom: 20px ;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
